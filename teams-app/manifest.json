@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.16",
+  "version": "1.0.0",
+  "id": "7298445a-f228-462f-a3bf-7227221c8514",
+  "packageName": "com.cataskmanager",
+  "developer": {
+    "name": "Webbrains Technologies",
+    "websiteUrl": "https://3e653bbbf533.ngrok-free.app",
+    "privacyUrl": "https://3e653bbbf533.ngrok-free.app",
+    "termsOfUseUrl": "https://3e653bbbf533.ngrok-free.app"
+  },
+  "name": {
+    "short": "CA Task Manager",
+    "full": "CA Task Manager"
+  },
+  "description": {
+    "short": "Task notifications",
+    "full": "CA Task Manager - Get task notifications in Teams"
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#667eea",
+  "validDomains": [],
+  "activities": {
+    "activityTypes": [
+      {
+        "type": "taskCreated",
+        "description": "Task created",
+        "templateText": "{taskTitle}"
+      }
+    ]
+  }
+}
