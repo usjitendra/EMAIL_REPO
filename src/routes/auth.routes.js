@@ -5,6 +5,6 @@ const authMiddleware = require("../Middlewares/auth.middleware");
 
 
 router.get("/get-permission", authMiddleware, authControllerobj.getUserPermissions);
-router.get("/send", authControllerobj.emailSend)
+router.post("/send", authControllerobj.emailSend)
 
 module.exports = router;

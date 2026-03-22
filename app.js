@@ -3,6 +3,7 @@ const http = require("http");
 const { Server } = require("socket.io");
 const cookieParser = require("cookie-parser");
 const cors = require("cors")
+const { send_function } = require("./src/controllers/email.send")
 
 const connectDB = require("./src/Config/db");
 const { Socket } = require("dgram");
@@ -31,14 +32,15 @@ app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-
 app.get("/health", (req, res) => {
   return res.status(200).json({ status: "Ok", message: "All Good." });
 });
-
+send_function()
 app.get("/", (req, res) => {
   res.send("🚀 Server is running on port 9096!");
 });
+
+
 
 
 app.use("/api/v1", require("./src/routes/main.routes"));
