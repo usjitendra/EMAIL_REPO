@@ -3,7 +3,7 @@ const http = require("http");
 const { Server } = require("socket.io");
 const cookieParser = require("cookie-parser");
 const cors = require("cors")
-const { send_function } = require("./src/controllers/email.send")
+// const { send_function } = require("./src/controllers/email.send")
 
 const connectDB = require("./src/Config/db");
 const { Socket } = require("dgram");
@@ -35,7 +35,6 @@ app.use(cookieParser());
 app.get("/health", (req, res) => {
   return res.status(200).json({ status: "Ok", message: "All Good." });
 });
-send_function()
 app.get("/", (req, res) => {
   res.send("🚀 Server is running on port 9096!");
 });
@@ -51,8 +50,9 @@ app.use((req, res) => res.status(404).json({ message: "Route not found" }));
 async function startServer() {
   try {
     await connectDB();
-    const PORT = process.env.PORT || 9096;
+    const PORT = process.env.PORT || 9696;
     server.listen(PORT, () => console.log(`✅ Server listening on port ${PORT}`));
+    // await send_function();
   } catch (error) {
     console.error("❌ FATAL: Server setup failed.", error.message);
     process.exit(1);
