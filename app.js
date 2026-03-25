@@ -3,7 +3,7 @@ const http = require("http");
 const { Server } = require("socket.io");
 const cookieParser = require("cookie-parser");
 const cors = require("cors")
-// const { send_function } = require("./src/controllers/email.send")
+const { send_function } = require("./src/controllers/email.send")
 
 const connectDB = require("./src/Config/db");
 const { Socket } = require("dgram");
@@ -52,7 +52,7 @@ async function startServer() {
     await connectDB();
     const PORT = process.env.PORT || 9696;
     server.listen(PORT, () => console.log(`✅ Server listening on port ${PORT}`));
-    // await send_function();
+    await send_function();
   } catch (error) {
     console.error("❌ FATAL: Server setup failed.", error.message);
     process.exit(1);

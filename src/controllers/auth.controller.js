@@ -133,6 +133,56 @@ Jitendra Singh Chauhan
   });
 
 
+  emailSendDelhi = tryCatchFn(async (req, res, next) => {
+
+
+    const { email } = req.body;
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,  // use env
+        pass: process.env.EMAIL_PASS,  // use env
+      },
+    });
+
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: email, // change to HR email
+      subject: "Application for MERN Stack Developer Role",
+      text: `
+I hope this email finds you well.
+
+My name is Jitendra Singh Chauhan, and I’m a MERN Stack Developer with 2 years of experience in building scalable and high-performance web applications.
+
+I’m reaching out to explore potential opportunities with your team, as I’m confident that my skills in React, Node.js, Express, and MongoDB could contribute effectively to your ongoing projects.
+
+I’ve attached my resume for your review. If you’re currently hiring for a MERN Stack role, I’d be glad to discuss how I can add value to your team. Would you be available for a quick call sometime this week?
+
+Looking forward to your response.
+
+Best regards,  
+Jitendra Singh Chauhan  
+📧 usjitendra055@gmail.com  
+📱 +91 6387056457
+`,
+      attachments: [
+        {
+          filename: "resume.pdf",
+          path: path.join(__dirname, "../email/Jitendra.pdf"),
+        },
+      ],
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    return responseHandler.successResponse(
+      res,
+      200,
+      "successfully"
+    );
+  });
+
+
 }
 
 module.exports = new AuthController();
