@@ -6,8 +6,10 @@ const cors = require("cors")
 // const { send_function, send_delhi } = require("./src/controllers/email.send")
 
 const connectDB = require("./src/Config/db");
-const { Socket } = require("dgram");
+// const { Socket } = require("dgram");
 const app = express();
+
+
 
 
 app.use(cors({

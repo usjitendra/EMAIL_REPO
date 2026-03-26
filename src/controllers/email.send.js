@@ -1,47 +1,47 @@
 // import axios from "axios";
+// const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+
 // export const sendBulkEmails = async (emails = []) => {
 //   let successCount = 0;
 //   let failCount = 0;
-//   try {
-//     const requests = emails.map((email) =>
-//       axios.post("http://13.233.107.1:9096/api/v1/auth/send", {
-//         email,
-//       })
-//     );
 
+//   for (let i = 0; i < emails.length; i++) {
+//     try {
+//       const res = await axios.post("http://13.233.107.1:9096/api/v1/auth/send", {
+//         email: emails[i],
+//       });
 
-//     console.log("requests", requests)
-//     const responses = await Promise.allSettled(requests);
+//       successCount++;
+//       console.log(`✅ Success: ${emails[i]}`, res.data);
 
-//     responses.forEach((res, index) => {
-//       if (res.status === "fulfilled") {
-//         successCount++;
-//         console.log(`✅ Success: ${emails[index]}`, res.value.data);
-//       } else {
-//         failCount++;
-//         console.log(`❌ Failed: ${emails[index]}`, res.reason.message);
-//       }
-//     });
+//     } catch (err) {
+//       failCount++;
+//       console.log(`❌ Failed: ${emails[i]}`, err.message);
+//     }
 
-//     console.log("\n📊 Final Report:");
-//     console.log("✅ Success Count:", successCount);
-//     console.log("❌ Failed Count:", failCount);
-//     console.log("📨 Total:", emails.length);
-//   } catch (error) {
-//     console.error("Bulk Error:", error.message);
+//     await delay(500); // 🔥 0.5 sec delay (important)
 //   }
-// };
 
-// const emails = [
-//   "anshika.bhalla@cloudit-us.com",
-//   // "Hr@dagarbrothers.com",
-//   // "vaidant@dagarbrothers.com",
-//   // "hr@cpdsindia.com",
-//   // "nio@weexglobal.com",
-//   // "contact.theschoolofyou@gmail.com"
+//   console.log("\n📊 Final Report:");
+//   console.log("✅ Success Count:", successCount);
+//   console.log("❌ Failed Count:", failCount);
+//   console.log("📨 Total:", emails.length);
+// };
+// const failedEmails = [
+//   "sivajothihr@gmail.com",
+//   "arulmani2703@gmail.com",
+//   "kumar.unnati@cloudstakes.com",
+//   "rohitsingh.jaraut@crestdata.ai",
+//   "ramkumar@klenty.com",
+//   "shakshi@prismitsystems.com",
+//   "career@thoughtwin.com",
+//   "hr@sols-pro.com",
+//   "dikshatripathi233@gmail.com",
+//   "commercialcareers@syneoshealth.com",
+//   "tech@digitologyinfotech.com"
 // ];
 // export const send_function = async () => {
-//   await sendBulkEmails(emails)
+//   // await sendBulkEmails(failedEmails)
 // }
 
 // // 
@@ -50,42 +50,44 @@
 
 
 
-
 // export const send_Delahi_email = async (emails = []) => {
 //   let successCount = 0;
 //   let failCount = 0;
+
 //   try {
-//     const requests = emails.map((email) =>
-//       axios.post("http://13.233.107.1:9096/api/v1/auth/delhi", {
-//         email,
-//       })
-//     );
+//     for (let i = 0; i < emails.length; i++) {
+//       try {
+//         const res = await axios.post(
+//           "http://13.233.107.1:9096/api/v1/auth/delhi",
+//           { email: emails[i] }
+//         );
 
-
-//     console.log("requests", requests)
-//     const responses = await Promise.allSettled(requests);
-
-//     responses.forEach((res, index) => {
-//       if (res.status === "fulfilled") {
 //         successCount++;
-//         console.log(`✅ Success: ${emails[index]}`, res.value.data);
-//       } else {
+//         console.log(`✅ Success: ${emails[i]}`, res.data);
+
+//       } catch (err) {
 //         failCount++;
-//         console.log(`❌ Failed: ${emails[index]}`, res.reason.message);
+//         console.log(`❌ Failed: ${emails[i]}`, err.message);
 //       }
-//     });
+
+//       await delay(500); // 🔥 0.5 sec delay (important)
+//     }
 
 //     console.log("\n📊 Final Report:");
 //     console.log("✅ Success Count:", successCount);
 //     console.log("❌ Failed Count:", failCount);
 //     console.log("📨 Total:", emails.length);
+
 //   } catch (error) {
 //     console.error("Bulk Error:", error.message);
 //   }
 // };
 
-// const email = ['contact@cybotrix.com']
+// const newHrEmails = [
+//   "careers@techugo.com",
+
+// ];
 
 // export const send_delhi = async () => {
-//   await send_Delahi_email(email)
+//   // await send_Delahi_email(newHrEmails)
 // }
