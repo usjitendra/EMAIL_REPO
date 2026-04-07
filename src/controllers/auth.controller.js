@@ -183,6 +183,69 @@ Jitendra Singh Chauhan
   });
 
 
+  emailSendsunil = tryCatchFn(async (req, res, next) => {
+    const { email } = req.body;
+
+    // transporter config
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER_S,
+        pass: process.env.EMAIL_PASS_S,
+      },
+    });
+
+    // mail options
+    const mailOptions = {
+      from: process.env.EMAIL_USER_S,
+      to: email,
+      subject:
+        "Application for Full Stack Engineer | 2+ Years Experience | Node.js • AWS • Docker",
+      text: `
+Hi,
+
+I hope this email finds you well.
+
+I am writing to express my interest in the Full Stack Engineer role at your organization.
+
+With 2 years of professional experience, I specialize in building production-grade backend systems and managing cloud infrastructure. In my current role, I have:
+
+- Architected and deployed secure multi-tier AWS architectures, including VPC (Public/Private subnets), Auto Scaling, and ALB.
+
+- Optimized system performance by implementing a Redis caching layer, reducing average database query load by 60%.
+
+- Containerized full-stack applications using Docker and Docker Compose, cutting image sizes by 40%.
+
+- Developed complex features like RBAC with granular permissions and automated scheduling workflows for international clients.
+
+I am a BCA graduate from Sardar Patel University with a CGPA of 8.87/10.0, ranked 7th in the University. My technical foundation in Node.js, combined with hands-on DevOps expertise, allows me to deliver high-performance, production-ready solutions.
+
+I have attached my resume for your review and would welcome the opportunity to discuss how my skills can contribute to your engineering team.
+
+Best regards,  
+Sunil Shekhawat  
+📱 +91 9925512382  
+LinkedIn: https://www.linkedin.com/in/sunil-sinh-shekhawat-0a7057232/
+    `,
+      attachments: [
+        {
+          filename: "Sunil.pdf",
+          path: path.join(__dirname, "../email/Sunil_Shekhawat_Resume.pdf"),
+        },
+      ],
+    };
+
+    // send mail
+    await transporter.sendMail(mailOptions);
+
+    return responseHandler.successResponse(
+      res,
+      200,
+      "Email sent successfully"
+    );
+  });
+
+
 }
 
 module.exports = new AuthController();
