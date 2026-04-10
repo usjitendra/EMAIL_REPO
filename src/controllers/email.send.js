@@ -176,14 +176,9 @@
 //   }
 // };
 // const emailss = [
-//   "surbhia.infowind@gmail.com",
-//   "charan.m@nishtechnologies.com",
-//   "samaarthmore@gmail.com",
-//   "roshni.raj@cloudex.pk",
-//   "frank@y-axis.com",
 //   "esha@certiwise.in",
 // ];
 
 // export const send_sunil = async () => {
-//   // await send_sunil_email(emailss)
+//   await send_sunil_email(emailss)
 // }
