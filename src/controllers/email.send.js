@@ -32,6 +32,7 @@
 //     await delay(500); // 🔥 delay
 //   }
 
+
 //   console.log("\n📊 Final Report:");
 //   console.log("✅ Success Count:", successCount);
 //   console.log("❌ Failed Count:", failCount);
@@ -51,32 +52,35 @@
 // //   "preeti.eminence@gmail.com",
 // //   "Talent@appalus.com"
 // // ];
-// const emails1 = [
-//   "hiring@asvayuktech.com",
-//   "sivajothihr@gmail.com",
-//   "kunal@computronics.in",
-//   "mahak.sunhare@computronics.in",
-//   "ashwaq@cloudresources.net",
-//   "HR@Netlarx.com",
-//   "renganayaki@vysystems.com",
-//   "team.skilledhyre@gmail.com",
-//   "Forcecraver.aditya@gmail.com",
-//   "jbhatia@forcecraver.com",
-//   "hr@slazzy.in",
-//   "gayathrig@im24x7.com",
-//   "hr@ifastx.in",
-//   "dharni@carmatech.in",
-//   "hr@mpforall.com",
-//   "hello@agentooz.com"
-// ];
+// const emailList = [
+//   "kritika.sinha@nexthireconsulting.com",
+//   "aqsa.amjad@invowork.com",
+//   "hr@devution.com",
+//   "minu.kumari@mobilecoderz.com",
+//   "careers@kapoorwealthpartners.com",
+//   "payalporwal@infograins.com",
+//   "saloni.oberoi@simplifyingskills.com",
+//   "Sunita.Joshi@simplifyingskills.com",
+//   "vartika.kesarwani@echttech.com",
+//   "hrvrinda076@gmail.com",
+//   "rashi.jain@appsontechnologies.in",
+//   "surbhia.infowind@gmail.com",
+//   "hello@agentooz.com",
+//   "vidyarockz97@gmail.com",
+//   "Hari@exatechinc.com",
+//   "Syed@exatechinc.com",
+//   "paramita.chatterjee@muraai.com",
+//   "recruitingME@Tcco.com",
+//   "galya.marinova@recruitify-global.com",
+//   "marfahtechnologies@gmail.com",
+//   "nexicotech@gmail.com",
+//   "st622957@gmail.com",
+//   "maya@tekblu.us",
+//   "hr@techanzy.com"
+// ]
 // export const send_function = async () => {
-//   // await sendBulkEmails(emails1)
+//   // await sendBulkEmails(emailList)
 // }
-
-// // 
-// // 
-// // 
-
 
 
 // export const send_Delahi_email = async (emails = []) => {
@@ -125,4 +129,61 @@
 
 // export const send_delhi = async () => {
 //   // await send_Delahi_email(emails)
+// }
+
+
+
+// /****************** For Sunil ******************/
+
+
+// export const send_sunil_email = async (emails = []) => {
+//   let successCount = 0;
+//   let failCount = 0;
+
+//   try {
+//     for (let i = 0; i < emails.length; i++) {
+
+//       // 🚫 Skip specific email
+//       if (emails[i] === "hr@webbrainstechnologies.com") {
+//         console.log(`⏭️ Skipped: ${emails[i]}`);
+//         continue;
+//       }
+
+//       try {
+//         const res = await axios.post(
+//           "http://13.233.107.1:9096/api/v1/auth/sunil",
+//           { email: emails[i] }
+//         );
+
+//         successCount++;
+//         console.log(`✅ Success: ${emails[i]}`, res.data);
+
+//       } catch (err) {
+//         failCount++;
+//         console.log(`❌ Failed: ${emails[i]}`, err.message);
+//       }
+
+//       await delay(500); // 🔥 0.5 sec delay
+//     }
+
+//     console.log("\n📊 Final Report:");
+//     console.log("✅ Success Count:", successCount);
+//     console.log("❌ Failed Count:", failCount);
+//     console.log("📨 Total:", emails.length);
+
+//   } catch (error) {
+//     console.error("Bulk Error:", error.message);
+//   }
+// };
+// const emailss = [
+//   "surbhia.infowind@gmail.com",
+//   "charan.m@nishtechnologies.com",
+//   "samaarthmore@gmail.com",
+//   "roshni.raj@cloudex.pk",
+//   "frank@y-axis.com",
+//   "esha@certiwise.in",
+// ];
+
+// export const send_sunil = async () => {
+//   // await send_sunil_email(emailss)
 // }

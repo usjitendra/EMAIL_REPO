@@ -132,7 +132,6 @@ Jitendra Singh Chauhan
     );
   });
 
-
   emailSendDelhi = tryCatchFn(async (req, res, next) => {
 
 
@@ -182,7 +181,6 @@ Jitendra Singh Chauhan
     );
   });
 
-
   emailSendsunil = tryCatchFn(async (req, res, next) => {
     const { email } = req.body;
 
@@ -199,37 +197,32 @@ Jitendra Singh Chauhan
     const mailOptions = {
       from: process.env.EMAIL_USER_S,
       to: email,
-      subject:
-        "Application for Full Stack Engineer | 2+ Years Experience | Node.js • AWS • Docker",
-      text: `
-Hi,
+      subject: "Full Stack Developer – Open to Opportunities | 2+ Year Experience",
+      text: `Hi,
 
-I hope this email finds you well.
+I hope you're doing well. I'm Sunil Shekhawat, a Full Stack Developer with 2+ year of hands-on experience building and deploying production-grade applications for clients across Australia, India, Canada, and the Middle East.
 
-I am writing to express my interest in the Full Stack Engineer role at your organization.
+My core stack includes Node.js, Express.js, React.js, MongoDB, Redis, and AWS — and I've worked on real-world systems serving thousands of users with a focus on performance, scalability, and clean architecture.
 
-With 2 years of professional experience, I specialize in building production-grade backend systems and managing cloud infrastructure. In my current role, I have:
+A few highlights from my experience:
+• Reduced DB query load by ~60% using Redis caching on high-traffic endpoints
+• Containerised full-stack apps with Docker, cutting image size by ~40%
+• Built RBAC systems, REST APIs, real-time chat (Socket.IO), and payment integrations
+• Provisioned AWS infrastructure (EC2, S3, ALB, Route 53, Auto Scaling)
 
-- Architected and deployed secure multi-tier AWS architectures, including VPC (Public/Private subnets), Auto Scaling, and ALB.
+I'm actively exploring Full Stack Developer opportunities and would love to connect if there's a relevant opening at your organization.
 
-- Optimized system performance by implementing a Redis caching layer, reducing average database query load by 60%.
+I've attached my resume for your reference. Happy to jump on a quick call at your convenience.
 
-- Containerized full-stack applications using Docker and Docker Compose, cutting image sizes by 40%.
+Thank you for your time!
 
-- Developed complex features like RBAC with granular permissions and automated scheduling workflows for international clients.
-
-I am a BCA graduate from Sardar Patel University with a CGPA of 8.87/10.0, ranked 7th in the University. My technical foundation in Node.js, combined with hands-on DevOps expertise, allows me to deliver high-performance, production-ready solutions.
-
-I have attached my resume for your review and would welcome the opportunity to discuss how my skills can contribute to your engineering team.
-
-Best regards,  
-Sunil Shekhawat  
-📱 +91 9925512382  
-LinkedIn: https://www.linkedin.com/in/sunil-sinh-shekhawat-0a7057232/
-    `,
+Best regards,
+Sunil Shekhawat
++91 9925512382
+linkedin.com/in/sunil-shekhawat`,
       attachments: [
         {
-          filename: "Sunil.pdf",
+          filename: "Sunil_Shekhawat_Resume.pdf",
           path: path.join(__dirname, "../email/Sunil_Shekhawat_Resume.pdf"),
         },
       ],
@@ -244,7 +237,6 @@ LinkedIn: https://www.linkedin.com/in/sunil-sinh-shekhawat-0a7057232/
       "Email sent successfully"
     );
   });
-
 
 }
 
