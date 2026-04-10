@@ -176,7 +176,8 @@
 //   }
 // };
 // const emailss = [
-//   "esha@certiwise.in",
+//   "hire.naariy@gmail.com",
+//   "parul.p@infinitysoftsystems.com"
 // ];
 
 // export const send_sunil = async () => {
