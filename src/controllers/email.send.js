@@ -38,48 +38,20 @@
 //   console.log("❌ Failed Count:", failCount);
 //   console.log("📨 Total:", emails.length);
 // };
-// // const email = [
-// //   "subhashree.d@mindbrain.co.in",
-// //   "nitin.p@arthdesignbuild.com",
-// //   "akanksha.choudhary@caglobal.com",
-// //   "hello@agentooz.com",
-// //   "hiring@techveda.consulting",
-// //   "ashwaq@cloudresources.net",
-// //   "priyadeydas18@gmail.com",
-// //   "hire.naariy@gmail.com",
-// //   "hr@witarist.com",
-// //   "aigetaicom@gmail.com",
-// //   "preeti.eminence@gmail.com",
-// //   "Talent@appalus.com"
-// // ];
-// const emailList = [
-//   "kritika.sinha@nexthireconsulting.com",
-//   "aqsa.amjad@invowork.com",
-//   "hr@devution.com",
-//   "minu.kumari@mobilecoderz.com",
-//   "careers@kapoorwealthpartners.com",
-//   "payalporwal@infograins.com",
-//   "saloni.oberoi@simplifyingskills.com",
-//   "Sunita.Joshi@simplifyingskills.com",
-//   "vartika.kesarwani@echttech.com",
-//   "hrvrinda076@gmail.com",
-//   "rashi.jain@appsontechnologies.in",
-//   "surbhia.infowind@gmail.com",
-//   "hello@agentooz.com",
-//   "vidyarockz97@gmail.com",
-//   "Hari@exatechinc.com",
-//   "Syed@exatechinc.com",
-//   "paramita.chatterjee@muraai.com",
-//   "recruitingME@Tcco.com",
-//   "galya.marinova@recruitify-global.com",
-//   "marfahtechnologies@gmail.com",
-//   "nexicotech@gmail.com",
-//   "st622957@gmail.com",
-//   "maya@tekblu.us",
-//   "hr@techanzy.com"
-// ]
+
+
+
+// const sss = [
+//   "career@appinventiv.com",
+//   "amisha.atray@appinventiv.com",
+//   "info@savvyr.in",
+//   "shefali.goel@isourse.com"
+// ];
+
+
+
 // export const send_function = async () => {
-//   // await sendBulkEmails(emailList)
+//   // await sendBulkEmails(updatedEmailList)
 // }
 
 
@@ -123,8 +95,7 @@
 //   }
 // };
 // const emails = [
-//   "hire.naariy@gmail.com",
-//   "parul.p@infinitysoftsystems.com"
+//   "hr@pravux.com",
 // ];
 
 // export const send_delhi = async () => {
@@ -176,10 +147,9 @@
 //   }
 // };
 // const emailss = [
-//   "hire.naariy@gmail.com",
-//   "parul.p@infinitysoftsystems.com"
+//   "hr@devution.com",
 // ];
 
 // export const send_sunil = async () => {
-//   await send_sunil_email(emailss)
+//   // await send_sunil_email(emailLists)
 // }
