@@ -41,17 +41,77 @@
 
 
 
-// const sss = [
-//   "career@appinventiv.com",
-//   "amisha.atray@appinventiv.com",
-//   "info@savvyr.in",
-//   "shefali.goel@isourse.com"
+// const email = [
+//   "t.pooja@drreddysfoundation.org",
+//   "amruta.k@upperthrust.com",
+//   "hrteam@codiasticsoft.com",
+//   "hr@mymonk.in",
+//   "hr@kretoss.com",
+//   "nitya.recruitment24@gmail.com",
+//   "techdevi29@gmail.com",
+//   "smaiti@aapnainfotech.com",
+//   "shikha.bhattacharya@techolution.com",
+//   "hr@lambdalogics.com",
+//   "mpavani@teqmavens.com",
+//   "akanksha.choudhary@caglobal.com",
+//   "diksha.dhakate@codersbrain.com",
+//   "logicalhr.softtech@gmail.com",
+//   "tvijayadevi@optimhire.com",
+//   "career@resourcedekho.com",
+//   "hr@myproject.ai",
+//   "hr@codingclave.com",
+//   "surbhia.infowind@gmail.com",
+//   "hr@ihookwebsolutions.com"
+// ]
+
+// const emailsss = [
+//   "ankita@veritech.ai",
+//   "ragini.b@datasysamerica.com",
+//   "m.rahulkumar@staffbees.com",
+//   "vinay@careits.com",
+//   "nitika.kalra@helixbeat.com",
+//   "nishantp@softclouds.com",
+//   "mahmoodalimir772@gmail.com",
+//   "hr@writlabs.com",
+//   "info@staffrex.in",
+//   "sumits@sysmind.com",
+//   "joyce@narveetech.com",
+//   "jobs@starkdigital.net",
+//   "jagriti.sharma@xicom.biz",
+//   "manoj.pant@joveo.com",
+//   "shikha.bhattacharya@techolution.com",
+//   "director@eyewynk.com",
+//   "cv@ukbindia.com",
+//   "raviteja.t@thehirewings.com"
+// ];
+
+// const remoteEmail =
+//   [
+//     "hr@dextertechnologies.com",
+//     "radheygopal.sharma@shriramgi.com",
+//     "sonalika@shriramgi.in",
+//     "shikha@mediagoats.agency",
+//     "ta@vpc-staffing.com"
+//   ]
+
+// const remails = [
+//   "hr@im24x7.com",
+//   "priya.pal@vayuz.com",
+//   "careers.india@urbanic.com",
+//   "janki.pandit@urbanic.com",
+//   "somnath@hmw3d.com",
+//   "priyanka.singh@hmw3d.com",
+//   "namrata.thakral@vayuz.com",
+//   "suhani.wadhwa@vayuz.com",
+//   "sakshi.pandey@vayuz.com",
+//   "aryan.gupta@vayuz.com",
+//   "gursimran@freshprints.com"
 // ];
 
 
 
 // export const send_function = async () => {
-//   // await sendBulkEmails(updatedEmailList)
+//   // await sendBulkEmails(remoteEmail)
 // }
 
 

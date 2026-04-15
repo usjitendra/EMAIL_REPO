@@ -95,29 +95,38 @@ class AuthController {
       },
     });
 
+
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: email, // change to HR email
-      subject: "Application for MERN Stack Developer Role",
+      to: email,
+      subject: "Application for Full Stack Developer | MERN Stack ",
       text: `
-I hope this email finds you well.
+Dear Hiring Manager,
 
-My name is Jitendra Singh Chauhan, and I’m a MERN Stack Developer with 2 years of experience in building scalable and high-performance web applications.
+I hope you're having a great week.
 
-I’m reaching out to explore potential opportunities with your team, as I’m confident that my skills in React, Node.js, Express, and MongoDB could contribute effectively to your ongoing projects.
+My name is Jitendra Singh Chauhan, and I am a Full Stack Developer with over 2 years of professional experience in building production-grade applications. My core expertise lies in the MERN stack, but I also have hands-on experience with performance optimization, Redis caching, and AWS infrastructure (EC2, S3, Docker).
 
-I’ve attached my resume for your review. If you’re currently hiring for a MERN Stack role, I’d be glad to discuss how I can add value to your team. Would you be available for a quick call sometime this week?
+Key Highlights of my experience:
+* Specialized in building scalable backend systems with Node.js & Express.
+* Expert in MongoDB Aggregation Pipelines and Schema design.
+* Developed complex features like Automated Fee Calculation and real-time chat systems using Socket.io.
+* Strong grip on frontend optimization with React.js.
 
-Looking forward to your response.
+I’ve attached my resume for your review. I am confident that my ability to build end-to-end scalable solutions can add immediate value to your engineering team.
 
-Best regards,  
-Jitendra Singh Chauhan  
-📧 usjitendra055@gmail.com  
+Are you available for a brief introductory call this week? I'd love to discuss how my technical background aligns with your current requirements.
+
+Best regards,
+
+Jitendra Singh Chauhan
+Full Stack Developer
+📧 usjitendra055@gmail.com
 📱 +91 6387056457
 `,
       attachments: [
         {
-          filename: "resume.pdf",
+          filename: "Jitendra_CV.pdf", // Filename thoda professional rakho
           path: path.join(__dirname, "../email/Jitendra_CV.pdf"),
         },
       ],
@@ -146,22 +155,30 @@ Jitendra Singh Chauhan
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: email, // change to HR email
-      subject: "Application for MERN Stack Developer Role",
+      to: email,
+      subject: "Application for Full Stack Developer | MERN Stack ",
       text: `
-I hope this email finds you well.
+Dear Hiring Manager,
 
-My name is Jitendra Singh Chauhan, and I’m a MERN Stack Developer with 2 years of experience in building scalable and high-performance web applications.
+I hope you're having a great week.
 
-I’m reaching out to explore potential opportunities with your team, as I’m confident that my skills in React, Node.js, Express, and MongoDB could contribute effectively to your ongoing projects.
+My name is Jitendra Singh Chauhan, and I am a Full Stack Developer with over 2 years of professional experience in building production-grade applications. My core expertise lies in the MERN stack, but I also have hands-on experience with performance optimization, Redis caching, and AWS infrastructure (EC2, S3, Docker).
 
-I’ve attached my resume for your review. If you’re currently hiring for a MERN Stack role, I’d be glad to discuss how I can add value to your team. Would you be available for a quick call sometime this week?
+Key Highlights of my experience:
+* Specialized in building scalable backend systems with Node.js & Express.
+* Expert in MongoDB Aggregation Pipelines and Schema design.
+* Developed complex features like Automated Fee Calculation and real-time chat systems using Socket.io.
+* Strong grip on frontend optimization with React.js.
 
-Looking forward to your response.
+I’ve attached my resume for your review. I am confident that my ability to build end-to-end scalable solutions can add immediate value to your engineering team.
 
-Best regards,  
-Jitendra Singh Chauhan  
-📧 usjitendra055@gmail.com  
+Are you available for a brief introductory call this week? I'd love to discuss how my technical background aligns with your current requirements.
+
+Best regards,
+
+Jitendra Singh Chauhan
+Full Stack Developer
+📧 usjitendra055@gmail.com
 📱 +91 6387056457
 `,
       attachments: [
