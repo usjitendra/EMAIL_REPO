@@ -17,7 +17,7 @@
 
 //     try {
 //       const res = await axios.post(
-//         "http://13.233.107.1:9096/api/v1/auth/send",
+//         "http://13.215.239.247:9696/api/v1/auth/send",
 //         { email: emails[i] }
 //       );
 
@@ -146,7 +146,7 @@
 //       console.log("ye bhai ver to ka code h salaa v2.0")
 //       try {
 //         const res = await axios.post(
-//           "http://13.233.107.1:9096/api/v1/auth/delhi",
+//           "http://13.215.239.247:9696/api/v1/auth/delhi",
 //           { email: emails[i] }
 //         );
 
@@ -178,6 +178,58 @@
 //   // await send_Delahi_email(emails)
 // }
 
+// /******************Arvind ******************/
+
+
+
+// export const send_arvind_email = async (emails = []) => {
+//   let successCount = 0;
+//   let failCount = 0;
+
+//   try {
+//     for (let i = 0; i < emails.length; i++) {
+
+//       // 🚫 Skip specific email
+//       if (emails[i] === "hr@webbrainstechnologies.com") {
+//         console.log(`⏭️ Skipped: ${emails[i]}`);
+//         continue;
+//       }
+
+//       try {
+//         const res = await axios.post(
+//           "http://13.215.239.247:9696/api/v1/auth/arvind",
+//           { email: emails[i] }
+//         );
+
+//         successCount++;
+//         console.log(`✅ Success: ${emails[i]}`, res.data);
+
+//       } catch (err) {
+//         failCount++;
+//         console.log(`❌ Failed: ${emails[i]}`, err.message);
+//       }
+
+//       await delay(500); // 🔥 0.5 sec delay
+//     }
+
+//     console.log("\n📊 Final Report:");
+//     console.log("✅ Success Count:", successCount);
+//     console.log("❌ Failed Count:", failCount);
+//     console.log("📨 Total:", emails.length);
+
+//   } catch (error) {
+//     console.error("Bulk Error:", error.message);
+//   }
+// };
+// const emai = [
+//   "hr@devution.com",
+// ];
+
+// export const send_Arvind = async () => {
+//   // await send_arvind_email(emai)
+// }
+
+
 
 
 // /****************** For Sunil ******************/
@@ -198,7 +250,7 @@
 
 //       try {
 //         const res = await axios.post(
-//           "http://13.233.107.1:9096/api/v1/auth/sunil",
+//           "http://13.215.239.247:9696/api/v1/auth/sunil",
 //           { email: emails[i] }
 //         );
 

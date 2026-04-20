@@ -4,6 +4,7 @@ const commonUtilsObj = require("../Utils/commonUtils.utils");
 const fs = require('fs');
 const path = require('path');
 const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 
 
@@ -255,7 +256,7 @@ linkedin.com/in/sunil-shekhawat`,
     );
   });
 
-    emailSendArvnd = tryCatchFn(async (req, res, next) => {
+  emailSendArvnd = tryCatchFn(async (req, res, next) => {
     const { email } = req.body;
 
     // transporter config
