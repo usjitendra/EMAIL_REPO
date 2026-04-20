@@ -255,6 +255,57 @@ linkedin.com/in/sunil-shekhawat`,
     );
   });
 
+    emailSendArvnd = tryCatchFn(async (req, res, next) => {
+    const { email } = req.body;
+
+    // transporter config
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER_A,
+        pass: process.env.EMAIL_PASS_A,
+      },
+    });
+
+    // mail options
+    const mailOptions = {
+      from: process.env.EMAIL_USER_S,
+      to: email,
+      subject: "Applying for Senior Backend Developer - MERN Stack",
+      text: `Hi HR Team,
+
+I am a Senior Backend Developer with 8+ years of experience specializing in the MERN stack.
+
+Key Skills: Node.js, Express.js, MongoDB, PostgreSQL, REST APIs, Microservices, AWS, Redis, System Design
+
+I have built scalable backend systems handling high traffic and have strong experience in API optimization, database design, and third-party integrations.
+
+Please find my resume attached for your review. I am available for an interview at your convenience.
+
+Looking forward to hearing from you.
+
+Regards,
+Arvind Kumar
++91 9767534284, +91 9506555137
+https://www.linkedin.com/in/arvind-kumar-76052a112`,
+      attachments: [
+        {
+          filename: "Arvind_Kumar_Resume.pdf",
+          path: path.join(__dirname, "../email/Arvind-SDE_030426.pdf"),
+        },
+      ],
+    };
+
+    // send mail
+    await transporter.sendMail(mailOptions);
+
+    return responseHandler.successResponse(
+      res,
+      200,
+      "Email sent successfully"
+    );
+  });
+
 }
 
 module.exports = new AuthController();

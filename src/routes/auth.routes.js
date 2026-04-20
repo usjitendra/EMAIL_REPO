@@ -8,6 +8,8 @@ router.get("/get-permission", authMiddleware, authControllerobj.getUserPermissio
 router.post("/send", authControllerobj.emailSend)
 router.post("/delhi", authControllerobj.emailSendDelhi)
 router.post("/sunil", authControllerobj.emailSendsunil)
+router.post("/arvind", authControllerobj.emailSendArvnd)
+
 
 
 
